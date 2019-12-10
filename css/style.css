@@ -1,0 +1,58 @@
+/* Color Pallet
+color: #ecfcff;
+color: #b2fcff;
+color: #5edfff;
+color: #3e64ff;
+https://colorhunt.co/palette/159617
+*/
+
+body{
+    background-color: #ecfcff;
+    margin: 5vh 0 0 0;
+
+}
+main{
+    background-color: yellow;
+    width: 100%;
+    height: 400px
+}
+
+/* HEADER & NAVBAR */
+header{
+    background-color: #ecfcff;
+    display: flex;
+    flex-direction: row;
+    height: 3vh;
+    justify-content: space-between;
+    left: 0;
+    padding: 1vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-link {
+    color: #3e64ff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    border-radius: 2%;
+    color: #5edfff;
+}
+
+#header-img {
+    height: 3vh;
+    margin-left: 2vw;
+}
+
+#nav-bar {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2vw;
+    width: 30%;
+}
