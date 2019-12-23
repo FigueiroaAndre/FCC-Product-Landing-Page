@@ -6,18 +6,15 @@ color: #3e64ff;
 https://colorhunt.co/palette/159617
 */
 
-body{
+body {
     background-color: #ecfcff;
+    font-family: 'Poppins', sans-serif;
     margin: 5vh 0 0 0;
-
-}
-main{
-    margin: auto;
-    width: 60%;
+    font-size:  12px;
 }
 
 /* HEADER & NAVBAR */
-header{
+header {
     background-color: #b2fcff;
     display: flex;
     flex-direction: row;
@@ -33,6 +30,7 @@ header{
 .nav-link {
     color: #3e64ff;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
 }
@@ -58,7 +56,51 @@ header{
 
 /* MAIN */
 h1 {
+    font-size: 2rem;
     text-align: center;
+}
+
+main {
+    margin: auto;
+    width: 60%;
+}
+
+/* - BUTTONS */
+
+.button {
+	background-color:#fbe555;
+    border-width: 0;
+    border-radius:5%;
+	display: block;
+	cursor:pointer;
+	color:black;
+	font-size: 1rem;
+    font-weight:bold;
+    margin: 0 auto;
+    padding: 1% 1.5%;
+	text-decoration:none;
+}
+.button:hover {
+	background-color:#fb9224;
+}
+
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.unclickable-button {
+    background-color: lightgray;
+    border-width: 0;
+    border-radius:5%;
+	display: block;
+	cursor:pointer;
+	color:black;
+	font-size: 1rem;
+    font-weight:bold;
+    margin: 0 auto;
+    padding: 1% 1.5%;
+	text-decoration:none;
 }
 
 /* - FORM */
@@ -70,29 +112,7 @@ h1 {
 }
 
 #form {
-    padding: 2%;
-}
-
-#submit {
-	background-color:#fbe555;
-    border-width: 0;
-    border-radius:2%;
-	display: block;
-	cursor:pointer;
-	color:black;
-    font-family: 'Poppins', sans-serif;
-	font-size:1rem;
-    font-weight:bold;
-    margin: auto;
-    padding: 0 1.5%;
-	text-decoration:none;
-}
-#submit:hover {
-	background-color:#fb9224;
-}
-#submite:active {
-	position:relative;
-	top:1px;
+    padding-bottom: 2%;
 }
 
 /* - FEATURES */
@@ -103,7 +123,7 @@ h1 {
     max-width: 100px;
 }
 
-.feature-icon-container{
+.feature-icon-container {
     flex-basis: 10%;
 }
 
@@ -112,13 +132,18 @@ h1 {
 }
 
 .feature-item {
+    align-items: flex-start;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
 }
 
-.feature-text{
+.feature-title {
+    font-size: 1.5rem;
+}
+
+.feature-text {
+    font-size: 1rem;
     width: 80%;
 }
 
@@ -135,4 +160,67 @@ h1 {
 #video {
     display: block;
     margin: auto;
+}
+
+/* - PRICING/PRODUCT */
+li.available {
+    color: green;
+}
+
+li.unavailable {
+    color: red;
+}
+
+.product-benefit {
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+ 
+.product-benefits-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 5% 0;
+}
+
+.product-description {
+    background-color: #5edfff;
+    border: 1px solid black;
+    border-radius: 2%;
+    flex-basis: 30%;
+}
+
+.product-items {
+    background-color: #ecfcff;
+    padding: 2%;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin: 3% auto;
+    padding: 0;
+    text-align: center;
+}
+
+#pricing {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+/* FOOTER */
+
+footer {
+    background-color:#b2fcff;
+    margin: auto;
+    padding: 1%;
+    width: 60%;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: center;
 }
