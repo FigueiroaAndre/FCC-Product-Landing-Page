@@ -9,22 +9,34 @@ https://colorhunt.co/palette/159617
 body {
     background-color: #ecfcff;
     font-family: 'Poppins', sans-serif;
-    margin: 5vh 0 0 0;
-    font-size:  12px;
+    margin: 3vh 0 0 0;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        margin-top: 20vh;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape){
+    body {
+        margin-top: 25vh;
+    }
 }
 
 /* HEADER & NAVBAR */
 header {
+    align-items: center;
     background-color: #b2fcff;
     display: flex;
     flex-direction: row;
     height: 3vh;
     justify-content: space-between;
     left: 0;
-    padding: 1vh;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
 }
 
 .nav-link {
@@ -36,22 +48,47 @@ header {
 }
 
 .nav-link:hover {
-    border-radius: 2%;
     color: #5edfff;
 }
 
 #header-img {
     height: 3vh;
-    margin-left: 2vw;
+    width: auto;
 }
 
 #nav-bar {
-    align-items: stretch;
+    align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: space-between;
     margin-right: 2vw;
     width: 30%;
+}
+
+@media only screen and (max-width: 767px) {
+    /* HEADER & NAVBAR FOR MOBILE DEVICES */
+    header{
+        flex-direction: column;
+        height: 20vh;
+    }
+
+    .nav-link{
+        text-align: center;
+    }
+
+    #header-img {
+        height: 10vh;
+    }
+
+    #nav-bar {
+        flex-flow: column nowrap;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape){
+    header {
+        height: 25vh;
+    }
 }
 
 /* MAIN */
@@ -65,6 +102,12 @@ main {
     width: 60%;
 }
 
+
+@media only screen and (max-width: 767px){
+    main {
+        width: 100vw;
+    }
+}
 /* - BUTTONS */
 
 .button {
@@ -116,6 +159,10 @@ main {
 }
 
 /* - FEATURES */
+.feature-description {
+    flex-basis: 85%;
+}
+
 .feature-icon {
     display: block;
     margin: auto;
@@ -127,10 +174,6 @@ main {
     flex-basis: 10%;
 }
 
-.feature-description {
-    flex-basis: 85%;
-}
-
 .feature-item {
     align-items: flex-start;
     display: flex;
@@ -138,19 +181,48 @@ main {
     justify-content: space-between;
 }
 
-.feature-title {
-    font-size: 1.5rem;
-}
-
 .feature-text {
     font-size: 1rem;
+    text-align: justify;
     width: 80%;
+}
+
+.feature-title {
+    text-align: start;
+    font-size: 1.5rem;
 }
 
 #features {
     padding: 2%;
 }
 
+@media only screen and (max-width: 767px){
+/* - FEATURES */
+    .feature-description{
+        flex-basis: 100%;
+    }
+
+    .feature-icon {
+        display: none;
+    }
+
+    .feature-icon-container {
+        flex-basis: 0%;
+    }
+
+    .feature-item {
+        align-items: center;
+    }
+
+    .feature-text {
+        margin: auto;
+        text-align: justify;
+    }
+
+    .feature-title {
+        text-align: center;
+    }
+}
 /* - VIDEO */
 
 #time-to-play {
@@ -160,6 +232,15 @@ main {
 #video {
     display: block;
     margin: auto;
+}
+
+@media only screen and (max-width: 767px){
+   /* - VIDEO */
+    
+   #video {
+       width: 96%;
+       height: auto;
+   }
 }
 
 /* - PRICING/PRODUCT */
@@ -197,7 +278,7 @@ li.unavailable {
 
 .product-title {
     font-size: 1.1rem;
-    margin: 3% auto;
+    margin: 3% auto;        
     padding: 0;
     text-align: center;
 }
@@ -208,6 +289,21 @@ li.unavailable {
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 2%;
+}
+
+@media only screen and (max-width: 767px){
+    /* - PRICING/PRODUCT */
+    
+    .product-description {
+        flex-basis: auto;
+        height: 30%;
+        width: 80%;
+        margin: 2.5% 0;
+    }
+
+    #pricing {
+        flex-flow: column nowrap;
+    }
 }
 
 /* FOOTER */
@@ -223,4 +319,16 @@ footer {
     font-size: 0.8rem;
     margin: 0;
     text-align: center;
+}
+
+@media only screen and (max-width: 767px){
+    /* FOOTER */
+    footer {
+        margin: 0;
+        width: 98%;
+    }
+
+    .footer-text {
+        width: 100%;
+    }
 }
